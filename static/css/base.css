@@ -1,5 +1,5 @@
 .cuerpo-inicio{
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
 .custom-link{
@@ -28,7 +28,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px; /* Espacio entre los enlaces */
+    text-align: center;
+    gap: 25px; /* Espacio entre los enlaces */
 }
 
 .navbar-nav .nav-item {
@@ -39,3 +40,5 @@
     text-decoration: none;
     color: black;
 }
+
+

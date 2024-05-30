@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Calendario - My Site{% endblock %}
+
+{% block body %}
+<div id="calendar"></div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth', // Vista inicial del calendario (mes)
+      locale: 'es', // Idioma del calendario (español)
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      events: [
+        // Aquí puedes añadir eventos si los tienes
+      ],
+      eventClick: function(info) {
+        // Acción al hacer clic en un evento
+      }
+    });
+    calendar.render();
+  });
+</script>
+{% endblock %}
