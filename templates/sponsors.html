@@ -1,8 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}Informacion{% endblock %}
+{% block title %}Sponsors - My Site{% endblock %}
 
-{% block content %}
-<h1>Bienvenido a la Copa Renault</h1>
-<p>Descubre todo sobre el torneo intercolegial más emocionante.</p>
+{% block body %}
+<h1>Los sponsors son :</h1>
+<div class="row">
+    {% for sponsor in sponsors %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <img src="{{ sponsor.logo }}" class="card-img-top" alt="{{ sponsor.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ sponsor.name }}</h5>
+                <p class="card-text">{{ sponsor.description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
