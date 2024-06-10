@@ -26,7 +26,6 @@ def sponsors():
         {"name": "Sponsor 7", "logo": "url_to_logo7.png", "description": "Description 7"},
         {"name": "Sponsor 8", "logo": "url_to_logo8.png", "description": "Description 8"},
         {"name": "Sponsor 9", "logo": "url_to_logo9.png", "description": "Description 9"},
-        {"name": "Sponsor 10", "logo": "url_to_logo10.png", "description": "Description 10"},
     ]
     return render_template('sponsors.html', sponsors=sponsors)
 
