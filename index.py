@@ -29,9 +29,9 @@ def sponsors():
     ]
     return render_template('sponsors.html', sponsors=sponsors)
 
-@app.route('/equipos')
-def equipos():
-    return render_template('equipos.html')
+@app.route('/deportes')
+def deportes():
+    return render_template('deportes.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

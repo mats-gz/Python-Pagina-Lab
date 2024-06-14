@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %} Deportes {% endblock %}
+
+{% block extra_styles %}
+<style>
+  .deportes-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .deporte {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .deporte img {
+    width: 100%;
+    height: auto;
+  }
+  .deporte h2 {
+    background-color: #343a40;
+    color: white;
+    margin: 0;
+    padding: 0.5em 0;
+  }
+  .deporte p {
+    padding: 1em;
+    margin: 0;
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+<h1>Deportes</h1>
+<p>Participa en nuestros emocionantes torneos de fútbol, básquet y vóley.</p>
+
+<div class="deportes-container">
+  <div class="deporte">
+    <img src="{{ url_for('static', filename='img/futbol.jpg') }}" alt="Fútbol">
+    <h2>Fútbol</h2>
+    <p>El deporte rey, donde equipos se enfrentan para demostrar quién es el mejor.</p>
+  </div>
+  <div class="deporte">
+    <img src="{{ url_for('static', filename='img/basquet.jpg') }}" alt="Básquet">
+    <h2>Básquet</h2>
+    <p>Un deporte dinámico y emocionante, lleno de saltos y encestes espectaculares.</p>
+  </div>
+  <div class="deporte">
+    <img src="{{ url_for('static', filename='img/voley.jpg') }}" alt="Vóley">
+    <h2>Vóley</h2>
+    <p>Un deporte de equipo que requiere coordinación y precisión.</p>
+  </div>
+</div>
+{% endblock %}
