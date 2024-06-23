@@ -1,14 +1,32 @@
-.carousel-image {
-    height: 550px; /* Ajusta la altura según tus necesidades */
-    object-fit: cover; /* Asegura que la imagen cubra el área definida */
-    width: 200%;
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
-.body-inicio {
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo para la parte superior de la página */
+.cuerpo-inicio {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Asegura que el contenido ocupe al menos la altura de la ventana */
-    text-align: center; /* Centra el texto */
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
 }
+
+/* Imagen de bienvenida */
+.bienvenida-reno {
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+

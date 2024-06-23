@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import mysql.connector
 
 app = Flask(__name__)
 
@@ -33,5 +34,20 @@ def sponsors():
 def deportes():
     return render_template('deportes.html')
 
+
+# Establecer conexión
+mydb = mysql.connector.connect(
+    host="bvs2k5leykzck1tysgjc-mysql.services.clever-cloud.com",
+    user="uot7hnrvgt0sxwxz",
+    password="",
+    database="bvs2k5leykzck1tysgjc"
+)
+
+# Crear un cursor
+mycursor = mydb.cursor()
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
+

@@ -1,50 +1,58 @@
-{% extends "base.html" %}
-
-{% block title %}Inicio{% endblock %}
+{% extends "base.html" %} 
+{% block title %} Inicio {% endblock %} 
 
 {% block extra_styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
-{% endblock %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+{% endblock %} 
 
 {% block body %}
-<div class="cuerpo-inicio"> 
-  <h1>Bienvenido a la Copa Renault</h1>
 
-  <p>La Copa Renault es el torneo intercolegial más grande de Córdoba Capital.</p>
-</div>
-<!-- Carrusel de Bootstrap -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://tntsports.com.ar/__export/1713133381383/sites/tntsports/img/2024/04/14/lionel-messi-argentina-mundial.jpg" class="d-block w-100 carousel-image" alt="Imagen 1">
-      <div class="carousel-caption d-none d-md-block">
+<div class="cuerpo-inicio">
+  <img src="https://i.ibb.co/vscsHZ2/7-CD86-CA3-D813-475-D-944-E-55-C4517-D515-E-removebg-preview.png" class="bienvenida-reno"/>
+  <h5>El torneo intercolegial más grande de Córdoba Capital.</h5>
+
+  <!-- Carruesel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://i.ibb.co/s5cgNgx/Copy-of-1.jpg" class="d-block w-100" alt="Imagen 1" />
       </div>
-      ibihbbº
-    </div>
-    <div class="carousel-item">
-      <img src="https://fifpro.org/media/fhmfhvkx/messi-world-cup.jpg?rxy=0.48356841796117644,0.31512414378031967&width=1600&height=1024&rnd=133210253587130000" class="d-block w-100 carousel-image" alt="Imagen 2">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-item">
+        <img src="https://i.ibb.co/Cn8djVk/Copy-of-COPA-R-014.jpg" class="d-block w-100" alt="Imagen 2" />
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="https://www.pap.pl/sites/default/files/styles/main_image/public/202307/pap_20221218_2YG.jpg?h=f783cdbc&itok=JbQLJ2_5" class="d-block w-100 carousel-image" alt="Imagen 3">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-item">
+        <img src="https://i.ibb.co/8r966TT/Copy-of-47.jpg" class="d-block w-100" alt="Imagen 3" />
       </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Siguiente</span>
-  </a>
+  <!-- Fin del Carruesel -->
+
+  <br/>
+
+  <!-- inicio de explicación-->
+<div class="cuerpo-explicacion">
+  <div class="primer-cuadrado">
+    <h1>intercolegial</h1>
+    <p>de ejemplo</p>
+  </div>
+
 </div>
+   <!-- fin de explicación-->
+
+</div>
+
 
 {% endblock %}
