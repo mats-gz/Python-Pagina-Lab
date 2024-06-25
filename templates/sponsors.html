@@ -3,10 +3,10 @@
 {% block title %}Sponsors{% endblock %}
 
 {% block body %}
-<h1>Los sponsors son :</h1>
-<div class="row">
+<h1 class="text-center">Los sponsors son :</h1>
+<div class="row justify-content-center">
     {% for sponsor in sponsors %}
-    <div class="col-md-4 mb-3">
+    <div class="col-md-4 mb-3 d-flex align-items-stretch">
         <div class="card">
             <img src="{{ sponsor.logo }}" class="card-img-top" alt="{{ sponsor.name }}">
             <div class="card-body">

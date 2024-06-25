@@ -1,7 +1,46 @@
 {% extends 'base.html' %}
 
-{% block title %}Contacto {% endblock %}
+{% block title %}Contacto{% endblock %}
 
-{% block body %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-8 text-center">
+            <a href="https://www.instagram.com/tu_cuenta_de_instagram/" class="btn btn-outline-primary me-2" target="_blank" rel="noopener">Visítanos en Instagram</a>
+            <!-- Ajusta el href con tu URL de Instagram y el texto según tu preferencia -->
+        </div>
+    </div>
 
+    <h1 class="text-center mb-4">Contacto</h1>
+    <p class="text-center mb-5">Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto con nosotros a través del siguiente formulario.</p>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="subject" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Asunto" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

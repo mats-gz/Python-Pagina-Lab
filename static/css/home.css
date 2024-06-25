@@ -30,3 +30,118 @@ body {
     margin-bottom: 15px;
 }
 
+.primer-cuadrado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(9, 9, 9, 0.1);
+    margin-left: -50px;
+}
+
+.primer-texto {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.primer-texto h2 {
+    margin-top: 0;
+}
+
+.primer-texto h6 {
+    margin-top: 10px;
+}
+
+.primer-imagen {
+    flex: 0 0 250px; /* Ajusta el tamaño del contenedor de la imagen */
+}
+
+.imagen-circular1 {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.segundo-cuadrado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(9, 9, 9, 0.1);
+    margin-left: 250px;
+    margin-top: 30px;
+}
+
+.segundo-texto {
+    flex: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.segundo-texto h2 {
+    margin-top: 0;
+}
+
+.segundo-texto h6 {
+    margin-top: 10px;
+}
+
+.segunda-imagen {
+    flex: 0 0 250px; /* Ajusta el tamaño del contenedor de la imagen */
+}
+
+.imagen-circular2 {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.tercer-cuadrado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(9, 9, 9, 0.1);
+    margin-left: -50px;
+    margin-top: 30px;
+}
+
+.tercer-texto {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.tercer-texto h2 {
+    margin-top: 0;
+}
+
+.tercer-texto h6 {
+    margin-top: 10px;
+}
+
+.tercer-imagen {
+    flex: 0 0 250px; /* Ajusta el tamaño del contenedor de la imagen */
+}
+
+.imagen-circular3 {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}

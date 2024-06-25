@@ -1,0 +1,60 @@
+.voley-general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tablas-fase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.tabla-grupo {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(60% - 10px);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #fdd835; /* Fondo amarillo */
+    color: #333;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+td {
+    border-bottom: 1px solid #e0e0e0; /* Rayas grises muy clarito */
+}
+
+tr:last-child td {
+    border-bottom: none; /* Quita la línea de borde del último td */
+}
+
+.header th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; /* Fondo gris claro al pasar el cursor */
+}

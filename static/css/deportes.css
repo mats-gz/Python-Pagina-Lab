@@ -1,0 +1,173 @@
+.presentacion-deportes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.voley-aux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -400PX;
+}
+
+.voley {
+
+  background-image: url("https://i.ibb.co/0Jr5Ftt/Captura-de-pantalla-2024-06-25-a-la-s-14-50-47-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Asegúrate de que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  width: 100%; /* Ajusta el ancho para que ocupe el 100% del contenedor padre */
+  max-width: 600px; /* Limita el ancho máximo */
+  height: 300px; /* Establece una altura específica */
+  padding: 40px; /* Ajusta el padding según sea necesario */
+
+}
+
+.texto-voley {
+  color: #fff;
+  font-size: 0.9em; /* Disminuye el tamaño de todos los elementos h dentro de .voley */
+  margin: 0.5em 0;
+  margin-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 100px;
+}
+
+
+.imagen-voley {
+  position:relative;
+  flex: 0 0 300px; /* Ajusta el tamaño del contenedor de la imagen */
+}
+
+.imagen-voley img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.imagen-voley::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* Ajusta el tamaño de la expansión hacia afuera */
+  left: -20px; /* Ajusta el tamaño de la expansión hacia afuera */
+  width: calc(100% + 40px); /* Ajusta el tamaño de la expansión hacia afuera */
+  height: calc(100% + 40px); /* Ajusta el tamaño de la expansión hacia afuera */
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 20px solid #004AAD; /* Ajusta el color y el grosor del borde */
+}
+
+
+.futbol-aux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100PX;
+}
+
+.futbol {
+
+  background-image: url("https://i.ibb.co/48j8Sbq/Captura-de-pantalla-2024-06-25-a-la-s-15-55-17-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Asegúrate de que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+
+  width: 100%; /* Ajusta el ancho para que ocupe el 100% del contenedor padre */
+  max-width: 800px; /* Limita el ancho máximo */
+  height: 300px; /* Establece una altura específica */
+  padding: 40px; /* Ajusta el padding según sea necesario */
+
+}
+
+.texto-futbol {
+  color: #fff;
+  font-size: 0.9em; /* Disminuye el tamaño de todos los elementos h dentro de .voley */
+  margin: 0.5em 0;
+  margin-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 80px;
+}
+
+
+.imagen-futbol {
+  position:relative;
+  flex: 0 0 300px; /* Ajusta el tamaño del contenedor de la imagen */
+}
+
+.imagen-futbol img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.imagen-futbol::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* Ajusta el tamaño de la expansión hacia afuera */
+  left: -20px; /* Ajusta el tamaño de la expansión hacia afuera */
+  width: calc(100% + 40px); /* Ajusta el tamaño de la expansión hacia afuera */
+  height: calc(100% + 40px); /* Ajusta el tamaño de la expansión hacia afuera */
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 20px solid #82B26D; /* Ajusta el color y el grosor del borde */
+}
+
+
+.basquet-aux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -400PX;
+}
+
+.basquet {
+
+  background-image: url("https://i.ibb.co/Gx4Fn8V/basquet-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Asegúrate de que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  width: 100%; /* Ajusta el ancho para que ocupe el 100% del contenedor padre */
+  max-width: 600px; /* Limita el ancho máximo */
+  height: 300px; /* Establece una altura específica */
+  padding: 40px; /* Ajusta el padding según sea necesario */
+
+}
+
+.texto-basquet {
+  color: #fff;
+  font-size: 0.9em; /* Disminuye el tamaño de todos los elementos h dentro de .voley */
+  margin: 0.5em 0;
+  margin-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 100px;
+}
+
+
+.imagen-basquet {
+  position:relative;
+  flex: 0 0 300px; /* Ajusta el tamaño del contenedor de la imagen */
+}
+
+.imagen-basquet img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.imagen-basquet::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* Ajusta el tamaño de la expansión hacia afuera */
+  left: -20px; /* Ajusta el tamaño de la expansión hacia afuera */
+  width: calc(100% + 40px); /* Ajusta el tamaño de la expansión hacia afuera */
+  height: calc(100% + 40px); /* Ajusta el tamaño de la expansión hacia afuera */
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 20px solid #FF914D; /* Ajusta el color y el grosor del borde */
+}
+  

@@ -3,59 +3,57 @@
 {% block title %} Deportes {% endblock %}
 
 {% block extra_styles %}
-<style>
-  .deportes-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  .deporte {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 300px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .deporte img {
-    width: 100%;
-    height: auto;
-  }
-  .deporte h2 {
-    background-color: #343a40;
-    color: white;
-    margin: 0;
-    padding: 0.5em 0;
-  }
-  .deporte p {
-    padding: 1em;
-    margin: 0;
-  }
-</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/deportes.css') }}" />
 {% endblock %}
 
 {% block body %}
-<h1>Deportes</h1>
-<p>Participa en nuestros emocionantes torneos de fútbol, básquet y vóley.</p>
+<div class="presentacion-deportes">
+  <h1>Deportes</h1>
+  <p>Participa en nuestros emocionantes torneos de fútbol, básquet y vóley.</p>
 
-<div class="deportes-container">
-  <div class="deporte">
-    <img src="{{ url_for('static', filename='img/futbol.jpg') }}" alt="Fútbol">
-    <h2>Fútbol</h2>
-    <p>El deporte rey, donde equipos se enfrentan para demostrar quién es el mejor.</p>
+  <!--inicio deportes-->
+  <div>
+    <div class="voley-aux">
+      <div class="voley">
+        <div class="texto-voley">
+          <h1>Voley</h1>
+          <h6>Un deporte de equipo que requiere coordinación y precisión. Si necesita más info...</h6>
+          <button onclick=location.href="{{ url_for('voley') }}">Presione aqui</button>
+        </div>
+      </div>
+        <div class="imagen-voley">
+          <img src="https://i.ibb.co/1nvFrhS/Copy-of-COPA-R-180.jpg"/>
+        </div>
+    </div>
+
+    <div class="futbol-aux">
+      <div class="imagen-futbol">
+        <img src="https://i.ibb.co/WxsMcK1/Copy-of-57.jpg"/>
+      </div>
+      <div class="futbol">
+        <div class="texto-futbol">
+          <h1>Futbol</h1>
+          <h6>El deporte rey, donde equipos se enfrentan para demostrar quién es el mejor. Si necesita más info...</h6>
+          <button onclick=location.href="{{ url_for('futbol') }}">Presione aqui</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="basquet-aux">
+      <div class="basquet">
+        <div class="texto-basquet">
+          <h1>Basquet</h1>
+          <h6>Un deporte dinámico y emocionante, lleno de saltos y encestes espectaculares. Si necesita más info...</h6>
+          <button onclick=location.href="{{ url_for('basquet') }}">Presione aqui</button>
+        </div>
+      </div>
+        <div class="imagen-basquet">
+          <img src="https://i.ibb.co/fpwPqxB/Copy-of-39.jpg"/>
+        </div>
+    </div>
+
+    
+
   </div>
-  <div class="deporte">
-    <img src="{{ url_for('static', filename='img/basquet.jpg') }}" alt="Básquet">
-    <h2>Básquet</h2>
-    <p>Un deporte dinámico y emocionante, lleno de saltos y encestes espectaculares.</p>
-  </div>
-  <div class="deporte">
-    <img src="{{ url_for('static', filename='img/voley.jpg') }}" alt="Vóley">
-    <h2>Vóley</h2>
-    <p>Un deporte de equipo que requiere coordinación y precisión.</p>
-  </div>
-</div>
+
 {% endblock %}
