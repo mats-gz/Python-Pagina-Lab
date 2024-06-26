@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-
+import mysql.connector
 app = Flask(__name__)
 
 grupo_1 = [
@@ -141,7 +141,17 @@ def basquet():
     return render_template('basquet.html', grupos=grupos)
 
 
+# Establecer conexión
+mydb = mysql.connector.connect(
+    host="bvs2k5leykzck1tysgjc-mysql.services.clever-cloud.com",
+    user="uot7hnrvgt0sxwxz",
+    password="",
+    password="hCqZt7L1kZZA2Dl9vdDl",
+    database="bvs2k5leykzck1tysgjc"
+)
 
+# Crear un cursor
+mycursor = mydb.cursor()
 
 if __name__ == '__main__':
     app.run(debug=True)
