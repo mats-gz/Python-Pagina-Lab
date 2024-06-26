@@ -1,4 +1,4 @@
-.voley-general{
+.futbol-general {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 80px;
     margin: 20px;
     padding: 20px;
 }
@@ -43,7 +43,7 @@ th {
 }
 
 td {
-    border-bottom: 1px solid #e0e0e0; /* Rayas grises muy clarito */
+    border-bottom: 1px solid #e0e0e0; /* Rayas grises muy claritas */
 }
 
 tr:last-child td {

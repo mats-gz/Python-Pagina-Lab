@@ -2,8 +2,49 @@
 
 {% block title %}Cantina{% endblock %}
 
+{% block body %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Menú de la Cantina</h2>
 
-{% block scripts %}
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+     
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="path_to_image_1" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Nombre del Plato 1</h5>
+                    <p class="card-text">Breve descripción del plato 1.</p>
+                    <p class="card-text fw-bold">Precio: $10.00</p>
+                </div>
+            </div>
+        </div>
 
 
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="path_to_image_2" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Nombre del Plato 2</h5>
+                    <p class="card-text">Breve descripción del plato 2.</p>
+                    <p class="card-text fw-bold">Precio: $12.00</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="path_to_image_3" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Nombre del Plato 3</h5>
+                    <p class="card-text">Breve descripción del plato 3.</p>
+                    <p class="card-text fw-bold">Precio: $8.00</p>
+                </div>
+            </div>
+        </div>
+
+      
+
+    </div>
+</div>
 {% endblock %}

@@ -2,7 +2,42 @@
 
 {% block title %}Basquet{% endblock %}
 
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/voley.css') }}" />
+{% endblock %}
 
-{% block scripts %}
+
+{% block body %}
+<div class="voley-general">
+    <h3>Bienvenido al apartado de Basquet</h3>
+    <h7>Aqui encontraras info de partidos, cancha, horarios y reglamentos</h7>
+
+    <div class="tablas-fase">
+        {% for grupo in grupos %}
+            <div class="tabla-grupo">
+                <h2>Grupo {{ loop.index }}</h2>
+                <table>
+                    <tr class="header">
+                        <th>Nombre Equipo</th>
+                        <th>Puntos</th>
+                        <th>Partidos Jugados</th>
+                        <th>Partidos Perdidos</th>
+                        <th>Partidos Ganados</th>
+                    </tr>
+                    {% for equipo in grupo %}
+                        <tr>
+                            <td>{{ equipo['Nombre Equipo'] }}</td>
+                            <td>{{ equipo['puntos'] }}</td>
+                            <td>{{ equipo['partidos jugados'] }}</td>
+                            <td>{{ equipo['partidos perdidos'] }}</td>
+                            <td>{{ equipo['partidos ganados'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
 
 {% endblock %}
