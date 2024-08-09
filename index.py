@@ -1,6 +1,17 @@
 from flask import Flask, render_template
 import mysql.connector
+from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
+
 app = Flask(__name__)
+
+CORS(app)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:cocoymati88@localhost:3306/CopaReno'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
 
 grupo_1 = [
     {"Nombre Equipo": "Monserrat", "puntos": 8, "partidos jugados": 3, "partidos perdidos": 1, "partidos ganados": 2},
@@ -98,33 +109,6 @@ def sponsors():
 def deportes():
     return render_template('deportes.html')
 
-grupo_1 = [
-    {'Nombre Equipo': 'Equipo A', 'puntos': 10, 'partidos jugados': 5, 'partidos perdidos': 2, 'partidos ganados': 3},
-    {'Nombre Equipo': 'Equipo B', 'puntos': 8, 'partidos jugados': 5, 'partidos perdidos': 3, 'partidos ganados': 2},
-    {'Nombre Equipo': 'Equipo C', 'puntos': 6, 'partidos jugados': 5, 'partidos perdidos': 4, 'partidos ganados': 1},
-    {'Nombre Equipo': 'Equipo D', 'puntos': 4, 'partidos jugados': 5, 'partidos perdidos': 5, 'partidos ganados': 0}
-]
-
-grupo_2 = [
-    {'Nombre Equipo': 'Equipo A', 'puntos': 12, 'partidos jugados': 6, 'partidos perdidos': 1, 'partidos ganados': 5},
-    {'Nombre Equipo': 'Equipo B', 'puntos': 9, 'partidos jugados': 6, 'partidos perdidos': 2, 'partidos ganados': 4},
-    {'Nombre Equipo': 'Equipo C', 'puntos': 7, 'partidos jugados': 6, 'partidos perdidos': 3, 'partidos ganados': 3},
-    {'Nombre Equipo': 'Equipo D', 'puntos': 3, 'partidos jugados': 6, 'partidos perdidos': 5, 'partidos ganados': 1}
-]
-
-grupo_3 = [
-    {'Nombre Equipo': 'Equipo A', 'puntos': 11, 'partidos jugados': 6, 'partidos perdidos': 1, 'partidos ganados': 5},
-    {'Nombre Equipo': 'Equipo B', 'puntos': 8, 'partidos jugados': 6, 'partidos perdidos': 2, 'partidos ganados': 4},
-    {'Nombre Equipo': 'Equipo C', 'puntos': 5, 'partidos jugados': 6, 'partidos perdidos': 3, 'partidos ganados': 3},
-    {'Nombre Equipo': 'Equipo D', 'puntos': 2, 'partidos jugados': 6, 'partidos perdidos': 5, 'partidos ganados': 1}
-]
-
-grupo_4 = [
-    {'Nombre Equipo': 'Equipo A', 'puntos': 13, 'partidos jugados': 7, 'partidos perdidos': 0, 'partidos ganados': 7},
-    {'Nombre Equipo': 'Equipo B', 'puntos': 10, 'partidos jugados': 7, 'partidos perdidos': 2, 'partidos ganados': 5},
-    {'Nombre Equipo': 'Equipo C', 'puntos': 6, 'partidos jugados': 7, 'partidos perdidos': 4, 'partidos ganados': 3},
-    {'Nombre Equipo': 'Equipo D', 'puntos': 3, 'partidos jugados': 7, 'partidos perdidos': 6, 'partidos ganados': 1}
-]
 @app.route('/voley')
 def voley():
     grupos = [grupo_1, grupo_2, grupo_3, grupo_4]
@@ -135,23 +119,23 @@ def futbol():
     grupos = [grupo_1, grupo_2, grupo_3, grupo_4]
     return render_template('futbol.html', grupos=grupos)
 
+
 @app.route('/basquet')
 def basquet():
-    grupos = [grupo_1, grupo_2, grupo_3, grupo_4]
-    return render_template('basquet.html', grupos=grupos)
+    return render_template('basquet.html')
 
 
 # Establecer conexión
 mydb = mysql.connector.connect(
     host="bvs2k5leykzck1tysgjc-mysql.services.clever-cloud.com",
     user="uot7hnrvgt0sxwxz",
-    password="",
     password="hCqZt7L1kZZA2Dl9vdDl",
     database="bvs2k5leykzck1tysgjc"
 )
 
 # Crear un cursor
 mycursor = mydb.cursor()
+
 
 if __name__ == '__main__':
     app.run(debug=True)
