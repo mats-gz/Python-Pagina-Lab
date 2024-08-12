@@ -195,3 +195,34 @@ INSERT INTO Equipos (id_equipo, nombre, id_colegio, entrenador, categoria, punto
 (46, 'Pías', 16, NULL, 'futbol', NULL, 'Posición Nº(1)'),
 (47, 'Pías', 16, NULL, 'voley', NULL, 'Posición Nº(3)'),
 (48, 'Pías', 16, NULL, 'basquet', NULL, 'Posición Nº(13)');
+
+-- ---
+-- Table 'Cantina'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `Cantina`;
+
+CREATE TABLE `Cantina` (
+  `id_plato` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NOT NULL,
+  `descripcion` TEXT NULL DEFAULT NULL,
+  `precio` DECIMAL(10,2) NOT NULL,
+  `disponibilidad` BOOLEAN NOT NULL DEFAULT TRUE,
+  `imagen` VARCHAR(255) NULL DEFAULT NULL, -- Columna para la URL de la imagen
+  PRIMARY KEY (`id_plato`)
+);
+
+-- ---
+-- Insertar platos en la tabla 'Cantina' con enlaces a imágenes
+-- ---
+
+INSERT INTO `Cantina` (`id_plato`, `nombre`, `descripcion`, `precio`, `disponibilidad`, `imagen`) VALUES
+(1, 'Hamburguesa', 'Hamburguesa con lechuga, tomate, queso y papas fritas', 1200.00, TRUE, 'https://example.com/images/hamburguesa.jpg'),
+(2, 'Choripán', 'Choripán con chimichurri y salsa criolla', 800.00, TRUE, 'https://example.com/images/choripan.jpg'),
+(3, 'Pizza', 'Pizza de mozzarella con orégano y aceitunas', 1000.00, TRUE, 'https://example.com/images/pizza.jpg'),
+(4, 'Empanada', 'Empanada de carne o pollo, al horno o frita', 200.00, TRUE, 'https://example.com/images/empanada.jpg'),
+(5, 'Lomito', 'Lomito completo con lechuga, tomate, jamón, queso y papas fritas', 1500.00, TRUE, 'https://example.com/images/lomito.jpg'),
+(6, 'Ensalada', 'Ensalada mixta con lechuga, tomate, cebolla y zanahoria', 500.00, TRUE, 'https://example.com/images/ensalada.jpg'),
+(7, 'Papas Fritas', 'Papas fritas crujientes con sal', 400.00, TRUE, 'https://example.com/images/papas_fritas.jpg'),
+(8, 'Bebida', 'Bebida gaseosa o agua mineral', 300.00, TRUE, 'https://example.com/images/bebida.jpg');
