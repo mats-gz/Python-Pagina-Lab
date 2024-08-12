@@ -1,4 +1,4 @@
--- Active: 1722942989265@@127.0.0.1@3306@CopaReno
+-- Active: 1723465331159@@127.0.0.1@3306@copareno
 CREATE DATABASE CopaReno
 
 -- ---
@@ -130,7 +130,7 @@ INSERT INTO Colegios (id_colegio, nombre, direccion, telefono, correo_electronic
 
 
 
-INSERT INTO Equipos (id_equipo, nombre, id_colegio, entrenador, ` categoria`, puntos_totales, clasificación_final) VALUES
+INSERT INTO Equipos (id_equipo, nombre, id_colegio, entrenador, categoria, puntos_totales, clasificación_final) VALUES
 -- Monserrat
 (1, 'Monserrat', 1, NULL, 'futbol', NULL, 'Posición Nº(3)'),
 (2, 'Monserrat', 1, NULL, 'voley', NULL, 'Posición Nº(5)'),
