@@ -1,4 +1,4 @@
--- Active: 1723465331159@@127.0.0.1@3306@copareno
+-- Active: 1722942989265@@127.0.0.1@3306@CopaReno
 CREATE DATABASE CopaReno
 
 -- ---

@@ -12,6 +12,17 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
+class Equipos(db.Model):
+    __tablename__ = "Equipos"
+    id_equipo = db.Column(db.Integer, primary_key = True)
+    nombre = db.Column(db.String(100), nullable=False)
+    id_colegio = db.Column(db.Integer, db.ForeignKey('colegios.id_colegio'), nullable=False)
+    entrenador = db.Column(db.String(100))
+    categoria = db.Column(db.String(20), nullable=False)  # FUTBOL, VOLEY O BASQUET
+    puntos_totales = db.Column(db.Integer)
+    clasificación_final = db.Column(db.String(50))  # Posición Nº(X)
+
+
 
 grupo_1 = [
     {"Nombre Equipo": "Monserrat", "puntos": 8, "partidos jugados": 3, "partidos perdidos": 1, "partidos ganados": 2},
@@ -109,10 +120,15 @@ def sponsors():
 def deportes():
     return render_template('deportes.html')
 
-@app.route('/voley')
+@app.route('/voley', methods=['GET'])
 def voley():
-    grupos = [grupo_1, grupo_2, grupo_3, grupo_4]
-    return render_template('voley.html', grupos=grupos)
+    tablas_equipos = Equipos.query.filter_by(categoria='voley').all()
+
+    equipos = [] 
+    for equipo in tablas_equipos:
+        equipos.append({"id":equipo.id_equipo, "nombre":equipo.nombre, "entrenador":equipo.entrenador, "puntos totales":equipo.puntos_totales, "clasificación final":equipo.clasificación_final})
+
+    return render_template('voley.html', equipos=equipos)
 
 @app.route('/futbol')
 def futbol():
@@ -123,6 +139,7 @@ def futbol():
 @app.route('/basquet')
 def basquet():
     return render_template('basquet.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
