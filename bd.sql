@@ -214,15 +214,14 @@ CREATE TABLE `Cantina` (
 );
 
 -- ---
--- Insertar platos en la tabla 'Cantina' con enlaces a imágenes
+-- Insertar platos en la tabla 'Cantina' con la misma URL de imagen
 -- ---
 
 INSERT INTO `Cantina` (`id_plato`, `nombre`, `descripcion`, `precio`, `disponibilidad`, `imagen`) VALUES
-(1, 'Hamburguesa', 'Hamburguesa con lechuga, tomate, queso y papas fritas', 1200.00, TRUE, 'https://example.com/images/hamburguesa.jpg'),
-(2, 'Choripán', 'Choripán con chimichurri y salsa criolla', 800.00, TRUE, 'https://example.com/images/choripan.jpg'),
-(3, 'Pizza', 'Pizza de mozzarella con orégano y aceitunas', 1000.00, TRUE, 'https://example.com/images/pizza.jpg'),
-(4, 'Empanada', 'Empanada de carne o pollo, al horno o frita', 200.00, TRUE, 'https://example.com/images/empanada.jpg'),
-(5, 'Lomito', 'Lomito completo con lechuga, tomate, jamón, queso y papas fritas', 1500.00, TRUE, 'https://example.com/images/lomito.jpg'),
-(6, 'Ensalada', 'Ensalada mixta con lechuga, tomate, cebolla y zanahoria', 500.00, TRUE, 'https://example.com/images/ensalada.jpg'),
-(7, 'Papas Fritas', 'Papas fritas crujientes con sal', 400.00, TRUE, 'https://example.com/images/papas_fritas.jpg'),
-(8, 'Bebida', 'Bebida gaseosa o agua mineral', 300.00, TRUE, 'https://example.com/images/bebida.jpg');
+(1, 'Hamburguesa', 'Hamburguesa con lechuga, tomate, queso y papas fritas', 1200.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
+(2, 'Choripán', 'Choripán con chimichurri y salsa criolla', 800.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
+(3, 'Pizza', 'Pizza de mozzarella con orégano y aceitunas', 1000.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
+(4, 'Empanada', 'Empanada de carne o pollo, al horno o frita', 200.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
+(5, 'Lomito', 'Lomito completo con lechuga, tomate, jamón, queso y papas fritas', 1500.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
+(6, 'Ensalada', 'Ensalada mixta con lechuga, tomate, cebolla y zanahoria', 500.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
+(7, 'Papas Fritas', 'Papas fritas crujientes con sal', 400.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s');

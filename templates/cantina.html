@@ -7,44 +7,18 @@
     <h2 class="text-center mb-4">Menú de la Cantina</h2>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
-     
+        {% for item in items %}
         <div class="col">
             <div class="card shadow-sm">
-                <img src="path_to_image_1" class="card-img-top" alt="...">
+                <img src="{{ item.imagen }}" class="card-img-top" alt="{{ item.nombre }}">
                 <div class="card-body">
-                    <h5 class="card-title">Nombre del Plato 1</h5>
-                    <p class="card-text">Breve descripción del plato 1.</p>
-                    <p class="card-text fw-bold">Precio: $10.00</p>
+                    <h5 class="card-title">{{ item.nombre }}</h5>
+                    <p class="card-text">{{ item.descripcion }}</p>
+                    <p class="card-text fw-bold">Precio: ${{ item.precio }}</p>
                 </div>
             </div>
         </div>
-
-
-        <div class="col">
-            <div class="card shadow-sm">
-                <img src="path_to_image_2" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Nombre del Plato 2</h5>
-                    <p class="card-text">Breve descripción del plato 2.</p>
-                    <p class="card-text fw-bold">Precio: $12.00</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col">
-            <div class="card shadow-sm">
-                <img src="path_to_image_3" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Nombre del Plato 3</h5>
-                    <p class="card-text">Breve descripción del plato 3.</p>
-                    <p class="card-text fw-bold">Precio: $8.00</p>
-                </div>
-            </div>
-        </div>
-
-      
-
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

@@ -22,35 +22,15 @@ class Equipos(db.Model):
     puntos_totales = db.Column(db.Integer)
     clasificación_final = db.Column(db.String(50))  # Posición Nº(X)
 
+class Cantina(db.Model):
+    __tablename__ = "Cantina"
+    id_plato = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(100), nullable=False)
+    descripcion = db.Column(db.Text, nullable=True)
+    precio = db.Column(db.Numeric(10, 2), nullable=False)
+    disponibilidad = db.Column(db.Boolean, nullable=False, default=True)
+    imagen = db.Column(db.String(255), nullable=True)
 
-
-grupo_1 = [
-    {"Nombre Equipo": "Monserrat", "puntos": 8, "partidos jugados": 3, "partidos perdidos": 1, "partidos ganados": 2},
-    {"Nombre Equipo": "Manuel Belgrano", "puntos": 5, "partidos jugados": 3, "partidos perdidos": 2, "partidos ganados": 1},
-    {"Nombre Equipo": "Instituto Técnico Renault", "puntos": 7, "partidos jugados": 3, "partidos perdidos": 1, "partidos ganados": 2},
-    {"Nombre Equipo": "Dr. Alejandro Carbó", "puntos": 9, "partidos jugados": 3, "partidos perdidos": 0, "partidos ganados": 3}
-]
-
-grupo_2 = [
-    {"Nombre Equipo": "San José", "puntos": 6, "partidos jugados": 3, "partidos perdidos": 2, "partidos ganados": 1},
-    {"Nombre Equipo": "Instituto Secundario Mariano Moreno", "puntos": 4, "partidos jugados": 3, "partidos perdidos": 3, "partidos ganados": 0},
-    {"Nombre Equipo": "Santa Infancia", "puntos": 7, "partidos jugados": 3, "partidos perdidos": 1, "partidos ganados": 2},
-    {"Nombre Equipo": "Taborin", "puntos": 5, "partidos jugados": 3, "partidos perdidos": 2, "partidos ganados": 1}
-]
-
-grupo_3 = [
-    {"Nombre Equipo": "Villada", "puntos": 6, "partidos jugados": 3, "partidos perdidos": 2, "partidos ganados": 1},
-    {"Nombre Equipo": "San Pablo", "puntos": 8, "partidos jugados": 3, "partidos perdidos": 1, "partidos ganados": 2},
-    {"Nombre Equipo": "Sagrado Corazón", "puntos": 9, "partidos jugados": 3, "partidos perdidos": 0, "partidos ganados": 3},
-    {"Nombre Equipo": "Colegio Cristo Rey", "puntos": 5, "partidos jugados": 3, "partidos perdidos": 2, "partidos ganados": 1}
-]
-
-grupo_4 = [
-    {"Nombre Equipo": "San Pedro", "puntos": 7, "partidos jugados": 3, "partidos perdidos": 1, "partidos ganados": 2},
-    {"Nombre Equipo": "La Salle", "puntos": 4, "partidos jugados": 3, "partidos perdidos": 3, "partidos ganados": 0},
-    {"Nombre Equipo": "Instituto Juan Zorrilla de San Martín", "puntos": 6, "partidos jugados": 3, "partidos perdidos": 2, "partidos ganados": 1},
-    {"Nombre Equipo": "Pías", "puntos": 8, "partidos jugados": 3, "partidos perdidos": 1, "partidos ganados": 2}
-]
 
 @app.route('/')
 def home():
@@ -58,7 +38,12 @@ def home():
 
 @app.route('/cantina')
 def cantina():
-    return render_template('cantina.html')
+    # Query all available items from the Cantina table
+    items = Cantina.query.filter_by(disponibilidad=True).all()
+
+    # Pass the items to the cantina.html template
+    return render_template('cantina.html', items=items)
+
 
 @app.route('/contacto')
 def contacto():
@@ -103,7 +88,6 @@ def basquet():
     grupos = [equipos[i:i + 4] for i in range(0, len(equipos), 4)]
 
     return render_template('basquet.html', grupos=grupos)
-
 
 
 if __name__ == '__main__':
