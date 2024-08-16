@@ -1,32 +1,38 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Equipos de Voley</title>
-</head>
-<body>
-    <h1>Equipos de Voley</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Entrenador</th>
-                <th>Puntos Totales</th>
-                <th>Clasificación Final</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for equipo in equipos %}
-            <tr>
-                <td>{{ equipo.id }}</td>
-                <td>{{ equipo.nombre }}</td>
-                <td>{{ equipo.entrenador }}</td>
-                <td>{{ equipo.puntos_totales }}</td>
-                <td>{{ equipo.clasificacion_final }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Voleibol{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/voley.css') }}" />
+{% endblock %}
+
+{% block body %}
+<div class="voley-general">
+    <h3>Bienvenido al apartado de Voleibol</h3>
+    <h7>Aquí encontrarás información sobre equipos, entrenadores, y clasificación.</h7>
+
+    <div class="tablas-fase">
+        {% for i in range(0, equipos|length, 4) %}
+            <div class="tabla-grupo">
+                <h2>Grupo {{ loop.index }}</h2>
+                <table>
+                    <tr class="header">
+                        <th>Nombre del Equipo</th>
+                        <th>Entrenador</th>
+                        <th>Puntos Totales</th>
+                        <th>Clasificación Final</th>
+                    </tr>
+                    {% for equipo in equipos[i:i+4] %}
+                        <tr>
+                            <td>{{ equipo.nombre }}</td>
+                            <td>{{ equipo.entrenador }}</td>
+                            <td>{{ equipo.puntos_totales }}</td>
+                            <td>{{ equipo.clasificacion_final }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
