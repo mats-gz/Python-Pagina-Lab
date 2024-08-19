@@ -218,10 +218,10 @@ CREATE TABLE `Cantina` (
 -- ---
 
 INSERT INTO `Cantina` (`id_plato`, `nombre`, `descripcion`, `precio`, `disponibilidad`, `imagen`) VALUES
-(1, 'Hamburguesa', 'Hamburguesa con lechuga, tomate, queso y papas fritas', 1200.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
-(2, 'Choripán', 'Choripán con chimichurri y salsa criolla', 800.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
-(3, 'Pizza', 'Pizza de mozzarella con orégano y aceitunas', 1000.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
-(4, 'Empanada', 'Empanada de carne o pollo, al horno o frita', 200.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
-(5, 'Lomito', 'Lomito completo con lechuga, tomate, jamón, queso y papas fritas', 1500.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
-(6, 'Ensalada', 'Ensalada mixta con lechuga, tomate, cebolla y zanahoria', 500.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s'),
-(7, 'Papas Fritas', 'Papas fritas crujientes con sal', 400.00, TRUE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAI0jHmE-a2vOYHcG-MStP0VO3KanNcI2Jw&s');
+(1, 'Hamburguesa', 'Hamburguesa con lechuga, tomate, queso y papas fritas', 1200.00, TRUE, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/1024px-Cheeseburger.jpg'),
+(2, 'Choripán', 'Choripán con chimichurri y salsa criolla', 800.00, TRUE, 'https://img.freepik.com/fotos-premium/choripan-sandwich-tradicional-argentino-salsa-chorizo-chimichurri-aislado_123827-2326.jpg'),
+(3, 'Pizza', 'Pizza de mozzarella con orégano y aceitunas', 1000.00, TRUE, 'https://media.istockphoto.com/id/496546118/photo/slice-of-fresh-italian-classic-original-pepperoni-pizza-isolated.jpg?s=612x612&w=0&k=20&c=7aYapAwoe4fO5jRiNMIFiflIztcBAA8s-GLqAmBiSgA='),
+(4, 'Empanada', 'Empanada de carne o pollo, al horno o frita', 200.00, TRUE, 'https://betos.com.ar/wp-content/uploads/2019/08/empanada-arabes.png'),
+(5, 'Lomito', 'Lomito completo con lechuga, tomate, jamón, queso y papas fritas', 1500.00, TRUE, 'https://media.tiempodesanjuan.com/p/d262e0dc0ded3cfa3eb4896aa4e225b3/adjuntos/331/imagenes/000/624/0000624382/790x0/smart/8260jpg.jpg'),
+(6, 'Ensalada', 'Ensalada mixta con lechuga, tomate, cebolla y zanahoria', 500.00, TRUE, 'https://media.istockphoto.com/id/953810510/es/foto/ensalada-verde-con-vegetales-frescos.jpg?s=612x612&w=0&k=20&c=mq8z75Woc8NcW3spX-RGcBp9Mq_tAuBB3Qio_CYaKiM='),
+(7, 'Papas Fritas', 'Papas fritas crujientes con sal', 400.00, TRUE, 'https://img.freepik.com/foto-gratis/papas-fritas_74190-1192.jpg');
