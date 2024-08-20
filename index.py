@@ -14,13 +14,13 @@ db = SQLAlchemy(app)
 
 class Equipos(db.Model):
     __tablename__ = "Equipos"
-    id_equipo = db.Column(db.Integer, primary_key = True)
+    id_equipo = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100), nullable=False)
     id_colegio = db.Column(db.Integer, db.ForeignKey('colegios.id_colegio'), nullable=False)
     entrenador = db.Column(db.String(100))
-    categoria = db.Column(db.String(20), nullable=False)  # FUTBOL, VOLEY O BASQUET
+    categoria = db.Column(db.String(20), nullable=False)  
     puntos_totales = db.Column(db.Integer)
-    clasificación_final = db.Column(db.String(50))  # Posición Nº(X)
+    clasificación_final = db.Column(db.String(50))  
 
 class Cantina(db.Model):
     __tablename__ = "Cantina"
@@ -31,6 +31,12 @@ class Cantina(db.Model):
     disponibilidad = db.Column(db.Boolean, nullable=False, default=True)
     imagen = db.Column(db.String(255), nullable=True)
 
+class Sponsors(db.Model):
+    __tablename__ = "Sponsors"
+    id_sponsor = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(100), nullable=False)
+    logo = db.Column(db.String(255), nullable=True)
+    descripcion = db.Column(db.Text, nullable=True)
 
 @app.route('/')
 def home():
@@ -38,12 +44,8 @@ def home():
 
 @app.route('/cantina')
 def cantina():
-    # Query all available items from the Cantina table
     items = Cantina.query.filter_by(disponibilidad=True).all()
-
-    # Pass the items to the cantina.html template
     return render_template('cantina.html', items=items)
-
 
 @app.route('/contacto')
 def contacto():
@@ -51,8 +53,7 @@ def contacto():
 
 @app.route('/sponsors')
 def sponsors():
-    sponsors = []
-
+    sponsors = Sponsors.query.all()  
     return render_template('sponsors.html', sponsors=sponsors)
 
 @app.route('/deportes')
@@ -65,32 +66,27 @@ def voley():
 
     equipos = [] 
     for equipo in tablas_equipos:
-        equipos.append({"id":equipo.id_equipo, "nombre":equipo.nombre, "entrenador":equipo.entrenador, "puntos totales":equipo.puntos_totales, "clasificación final":equipo.clasificación_final})
+        equipos.append({
+            "id": equipo.id_equipo,
+            "nombre": equipo.nombre,
+            "entrenador": equipo.entrenador,
+            "puntos_totales": equipo.puntos_totales,
+            "clasificación_final": equipo.clasificación_final
+        })
 
     return render_template('voley.html', equipos=equipos)
 
 @app.route('/futbol', methods=['GET'])
 def futbol():
-    # Obtener todos los equipos de fútbol desde la base de datos
     equipos = Equipos.query.filter_by(categoria='futbol').all()
-
-    # Agrupar los equipos en listas de 4
     grupos = [equipos[i:i + 4] for i in range(0, len(equipos), 4)]
-
     return render_template('futbol.html', grupos=grupos)
 
 @app.route('/basquet', methods=['GET'])
 def basquet():
-    # Obtener todos los equipos de básquet desde la base de datos
     equipos = Equipos.query.filter_by(categoria='basquet').all()
-
-    # Agrupar los equipos en listas de 4
     grupos = [equipos[i:i + 4] for i in range(0, len(equipos), 4)]
-
     return render_template('basquet.html', grupos=grupos)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-

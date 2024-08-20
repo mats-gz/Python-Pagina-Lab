@@ -203,6 +203,7 @@ INSERT INTO Equipos (id_equipo, nombre, id_colegio, entrenador, categoria, punto
 
 DROP TABLE IF EXISTS `Cantina`;
 
+
 CREATE TABLE `Cantina` (
   `id_plato` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(100) NOT NULL,
@@ -225,3 +226,32 @@ INSERT INTO `Cantina` (`id_plato`, `nombre`, `descripcion`, `precio`, `disponibi
 (5, 'Lomito', 'Lomito completo con lechuga, tomate, jamón, queso y papas fritas', 1500.00, TRUE, 'https://media.tiempodesanjuan.com/p/d262e0dc0ded3cfa3eb4896aa4e225b3/adjuntos/331/imagenes/000/624/0000624382/790x0/smart/8260jpg.jpg'),
 (6, 'Ensalada', 'Ensalada mixta con lechuga, tomate, cebolla y zanahoria', 500.00, TRUE, 'https://media.istockphoto.com/id/953810510/es/foto/ensalada-verde-con-vegetales-frescos.jpg?s=612x612&w=0&k=20&c=mq8z75Woc8NcW3spX-RGcBp9Mq_tAuBB3Qio_CYaKiM='),
 (7, 'Papas Fritas', 'Papas fritas crujientes con sal', 400.00, TRUE, 'https://img.freepik.com/foto-gratis/papas-fritas_74190-1192.jpg');
+
+-- ---
+-- Table 'Sponsors'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `Sponsors`;
+
+CREATE TABLE `Sponsors` (
+  `id_sponsor` INT NOT NULL AUTO_INCREMENT, -- ID único para cada patrocinador
+  `nombre` VARCHAR(100) NOT NULL, -- Nombre del patrocinador
+  `logo` VARCHAR(255) NULL DEFAULT NULL, -- URL o ruta del logo
+  `descripcion` TEXT NULL DEFAULT NULL, -- Descripción del patrocinador
+  PRIMARY KEY (`id_sponsor`) -- Llave primaria
+);
+
+-- Insertar datos de ejemplo en la tabla 'Sponsors'
+INSERT INTO `Sponsors` (`nombre`, `logo`, `descripcion`) VALUES
+('Pritty', 'https://www.pritty.com.ar/img/imgredes.jpg', 'Es una reconocida marca argentina de bebidas, famosa por su línea de gaseosas y aguas saborizadas. Fundada en 1968, Pritty se ha consolidado como un referente en el mercado de bebidas no alcohólicas en Argentina, ofreciendo productos que se destacan por su sabor refrescante y calidad.'),
+('Coca-Cola Andina', 'https://ams3.digitaloceanspaces.com/graffica/2023/02/cocacola-logo-1024x696.jpeg', 'Coca-Cola Andina es una de las principales embotelladoras de Coca-Cola en Argentina, con operaciones en Córdoba. Se dedica a la producción, comercialización y distribución de bebidas de la marca Coca-Cola.'),
+('Arcor', 'https://mir-s3-cdn-cf.behance.net/projects/404/1a76e5142362123.62a66f5815524.jpg', 'Arcor es una empresa multinacional argentina, líder en la producción de alimentos, golosinas y chocolates. Fundada en 1951 en Arroyito, Córdoba, Arcor se ha expandido internacionalmente y es conocida por su calidad e innovación en el sector alimenticio.'),
+('Sancor', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ECRjsN9JgaJNVbAjdcr2oYPRlxYhfZVqwg&s', 'Sancor es una de las principales cooperativas lácteas de Argentina, con sede en Sunchales, Santa Fe, y una fuerte presencia en Córdoba. Sancor ofrece una amplia gama de productos lácteos de alta calidad.'),
+('La Voz del Interior', 'https://upload.wikimedia.org/wikipedia/commons/9/9c/La_Voz_del_Interior_logo.png', 'La Voz del Interior es uno de los principales diarios de Córdoba y de Argentina, fundado en 1904. Ofrece noticias locales, nacionales e internacionales y es una referencia importante en el periodismo cordobés.'),
+('Grupo Edisur', 'https://seeklogo.com/images/L/la-voz-del-interior-logo-75C60A791E-seeklogo.com.png', 'Grupo Edisur es una destacada empresa desarrolladora de bienes raíces en Córdoba. Especializada en la construcción de viviendas, edificios y proyectos urbanísticos, se ha convertido en un referente del sector inmobiliario en la región.'),
+('Tarjeta Naranja', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fdossiernet.com%2Farticulo%2Fnaranja-presenta-su-nueva-imagen%2F11431&psig=AOvVaw0EEFyYYL3yK-lo4CRw1Ov-&ust=1724240830990000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiqlofAg4gDFQAAAAAdAAAAABAE', 'Tarjeta Naranja es la principal emisora de tarjetas de crédito no bancarias en Argentina, con sede en Córdoba. Fundada en 1985, se destaca por su innovación y su fuerte presencia en el mercado financiero argentino.'),
+('Bimbo', 'https://w7.pngwing.com/pngs/1015/945/png-transparent-mexico-bakery-grupo-bimbo-bimbo-bakeries-usa-business-people-dog-like-mammal-logo.png', 'Bimbo es una empresa multinacional mexicana de alimentos, famosa por su pan y productos de panadería. En Argentina, y específicamente en Córdoba, Bimbo tiene una fuerte presencia y es conocida por su variedad de productos de alta calidad.'),
+('Bancor', 'https://play-lh.googleusercontent.com/Zv_iPYQaKUxHMwXDW3kHB_MSFbwWnXcS7L_0SJrV9v4uAwaDpllhHl6BMQYRuTHiRJs7', 'Bancor, el Banco de Córdoba, es una institución financiera líder en la provincia de Córdoba. Ofrece una amplia gama de servicios bancarios y financieros a individuos y empresas, destacándose por su compromiso con el desarrollo económico y social de la región.');
+
+ 
